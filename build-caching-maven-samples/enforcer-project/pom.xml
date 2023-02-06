@@ -107,13 +107,13 @@
                       <inputs>
                         <properties>
                           <property>
-                            <name>commandLineRules</name>
-                          </property>
-                          <property>
                             <name>fail</name>
                           </property>
                           <property>
                             <name>failFast</name>
+                          </property>
+                          <property>
+                            <name>failIfNoRules</name>
                           </property>
                           <property>
                             <name>ignoreCache</name>
@@ -130,23 +130,10 @@
                       </inputs>
                       <iteratedProperties>
                         <property>
-                          <name>rules</name>
-                          <inputs>
-                            <properties>
-                              <property>
-                                <name>includes</name>
-                              </property>
-                              <property>
-                                <name>excludes</name>
-                              </property>
-                              <property>
-                                <name>searchTransitive</name>
-                              </property>
-                              <property>
-                                <name>message</name>
-                              </property>
-                            </properties>
-                          </inputs>
+                          <name>rulesToExecute</name>
+                        </property>
+                        <property>
+                          <name>rulesToSkip</name>
                         </property>
                       </iteratedProperties>
                       <nestedProperties>
@@ -186,9 +173,9 @@
                       <id>enforce-bytecode-version</id>
                       <inputs>
                         <ignoredProperties>
-                          <ignore>commandLineRules</ignore>
                           <ignore>fail</ignore>
                           <ignore>failFast</ignore>
+                          <ignore>failIfNoRules</ignore>
                           <ignore>ignoreCache</ignore>
                           <ignore>mojoExecution</ignore>
                           <ignore>session</ignore>
@@ -197,29 +184,10 @@
                       </inputs>
                       <iteratedProperties>
                         <property>
-                          <name>rules</name>
-                          <inputs>
-                            <properties>
-                              <property>
-                                <name>maxJdkVersion</name>
-                              </property>
-                              <property>
-                                <name>maxJavaMajorVersionNumber</name>
-                              </property>
-                              <property>
-                                <name>ignoredScopes</name>
-                              </property>
-                              <property>
-                                <name>ignoreClasses</name>
-                              </property>
-                              <property>
-                                <name>ignoreOptionals</name>
-                              </property>
-                              <property>
-                                <name>excludes</name>
-                              </property>
-                            </properties>
-                          </inputs>
+                          <name>rulesToExecute</name>
+                        </property>
+                        <property>
+                          <name>rulesToSkip</name>
                         </property>
                       </iteratedProperties>
                       <nestedProperties>
